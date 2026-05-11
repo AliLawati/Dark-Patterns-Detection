@@ -1,7 +1,7 @@
 import joblib
 
-tfidf = joblib.load("models/tfidf_vectorizer_5.pkl")
-rf = joblib.load("models/random_forest_model_5.pkl")
+tfidf = joblib.load("models/tfidf_vectorizer.pkl")
+rf = joblib.load("models/random_forest_model.pkl")
 
 def classify_with_tf_idf(policy_text):
 	X_tfidf = tfidf.transform([policy_text])
