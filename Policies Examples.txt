@@ -1,3 +1,11 @@
-While using our website, all of your personal data will be encrypted and secured with the highest measures possible.
-In some circumstances, your personal data might be sold to third-parties.
-With your consent, we might send your personal data to our partners for providing you with certain services.
+Safe:-
+------
+1. While using our website, all of your personal data will be encrypted and secured with the highest measures possible.
+2. By signing up to this newsletter, we will use your usage and behavioral data for enhancing our products and services.
+3. If we update our privacy policy, we might notify you either via email or your registered phone number.
+
+Dark:-
+------
+1. Under certain circumstances, your personal data might be sold to third-parties.
+2. In some cases, we will share your data with our third-party partners for marketing purposes.
+3. With your consent, we might send your personal data to our partners for providing you with certain services.
