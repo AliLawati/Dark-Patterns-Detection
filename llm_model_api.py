@@ -2,19 +2,17 @@ import json
 import asyncio
 import os
 import re
-from starlette.responses import StreamingResponse
-
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 import tensorflow as tf
-
-tf.get_logger().setLevel('ERROR')
-
+from starlette.responses import StreamingResponse
+import uvicorn
 import httpx
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from bert_classification import classify_with_bert
 from tfidf_classification import classify_with_tf_idf
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+tf.get_logger().setLevel('ERROR')
 
 app = FastAPI()
 app.add_middleware(
@@ -103,7 +101,4 @@ async def explain_policies_classification_in_detail(request: Request):
 	return StreamingResponse(process_policy_stream(policies, classify_with_tf_idf, brief=False),
 							 media_type="application/json")
 
-if __name__ == "__main__":
-	import uvicorn
-
-	uvicorn.run(app, host="localhost", port=8000)
+uvicorn.run(app, host="localhost", port=8000)
